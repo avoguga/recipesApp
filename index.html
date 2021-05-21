@@ -31,10 +31,8 @@
         
                         <div class="div_TextInputs">
                             <div class="text_TextInput">
-                                <div>
-                                    <span>Descrição</span>
-                                </div>
-                                <input type="text" id="description" />
+                                <span>Descrição</span>
+                                <textarea id="description"></textarea>
                             </div>
                         </div>
         
@@ -42,17 +40,20 @@
         
                             <div class="text_TextInput">
                                 <span>Tempo de preparo</span>
-                                <input type="text" id="prepare_time" />
+                                <input type="time" id="prepare_Time" />
                             </div>
         
                             <div class="text_TextInput">
                                 <span>Peso total da receita</span>
-                                <input type="text" id="total_weight" />
+                                <div class="teste">
+                                    <input type="number" id="total_Weight"/>
+                                    <input type="text" id="total_Weight_Type"/>
+                                </div>
                             </div>
 
                             <div class="text_TextInput">
                                 <span>Número total de porções</span>                          
-                                <input type="text" id="totalPortionNumber" />
+                                <input type="number" id="totalPortionNumber" />
                             </div>
                         </div>
 
@@ -64,8 +65,8 @@
                         </div>
                     </div>
                 
-                    <div class="recipe_Photo_Area">
-                        <div class="teste">
+                    <div>
+                        <div class="recipe_Photo_Area">
                             <img src="../assets/images/sandwich.svg" id="photo" class="recipe_Photo"/>
                         </div>
                     </div>
