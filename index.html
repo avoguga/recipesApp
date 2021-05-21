@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./styles.css">
+
+    <title>Recipes</title>
+</head>
+
+<body>
+
+    <section id="Section_Personal_Information">
+        <form>
+            <div class="area_Main">
+
+                <p class="basic_Information">Informação Básica</p>
+
+                <div class="area_Text_And_Photo">
+
+                    <div class="area_TextInputs">
+                        <div class="div_TextInputs">
+                            <div class="text_TextInput">
+                                <span>Nome</span>
+                                <input type="text" id="recipe_Name"/>
+                            </div>
+                        </div>
+        
+                        <div class="div_TextInputs">
+                            <div class="text_TextInput">
+                                <div>
+                                    <span>Descrição</span>
+                                </div>
+                                <input type="text" id="description" />
+                            </div>
+                        </div>
+        
+                        <div class="div_TextInputs">
+        
+                            <div class="text_TextInput">
+                                <span>Tempo de preparo</span>
+                                <input type="text" id="prepare_time" />
+                            </div>
+        
+                            <div class="text_TextInput">
+                                <span>Peso total da receita</span>
+                                <input type="text" id="total_weight" />
+                            </div>
+
+                            <div class="text_TextInput">
+                                <span>Número total de porções</span>                          
+                                <input type="text" id="totalPortionNumber" />
+                            </div>
+                        </div>
+
+                        <div class="div_TextInputs">    
+                            <div class="text_TextInput">
+                                <span>Categoria</span>
+                                <input type="text" multiple />
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="recipe_Photo_Area">
+                        <div class="teste">
+                            <img src="../assets/images/sandwich.svg" id="photo" class="recipe_Photo"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+
+</body>
+
+</html>
