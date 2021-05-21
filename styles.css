@@ -15,21 +15,21 @@ html{
 body{
     background-color: white;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-#Section_Personal_Information{
+#Section_Basic{
     display: grid;
     grid-template-rows: 8vh 40vh 48vh;
     width: 80%;
     column-gap: 20px;
     row-gap: 10px;
     padding: 0 30px;
-    margin-bottom: 200px;
 }
 
-.basic_Information{
+.main_Title{
   margin-left: 10px;
   margin-bottom: 20px;
 
@@ -39,7 +39,7 @@ body{
 }
 
 /* Inicio do Primeiro Componente Card User */
-#Section_Personal_Information #card_User{
+#Section_Basic #card_User{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,12 +51,12 @@ body{
 }
 
 /* Aréa do Formulario */
-#Section_Personal_Information form{
+#Section_Basic form{
   grid-row: 2/4;
   display: grid;
 }
 
-#Section_Personal_Information form .area_Main{
+#Section_Basic form .area_Main{
   width: 100%;
   min-height: 50%;
   height: 90%;
@@ -65,13 +65,13 @@ body{
   border-radius: 10px;
 }
 
-#Section_Personal_Information form .area_Text_And_Photo{
+#Section_Basic form .area_Text_And_Photo{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-#Section_Personal_Information form .area_TextInputs{
+#Section_Basic form .area_TextInputs{
   display: flex;
   flex-direction: column;
   width: 60%;
@@ -101,27 +101,44 @@ body{
   height: 100px;
 }
 
-#Section_Personal_Information form .area_TextInputs .div_TextInputs{
+#Section_Basic form .area_TextInputs .div_TextInputs{
   display: flex;
   width: 100%;
   justify-content: space-between;
   height: 100px;
   margin: 0;
 }
-#Section_Personal_Information form .area_TextInputs .div_TextInputs .text_TextInput{
+
+#Section_Basic form .area_TextInputs .ingredients_TextInputs{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  height: 100px;
+  margin: 0;
+}
+
+#Section_Basic form .area_TextInputs .div_TextInputs .text_TextInput{
   display: flex;
   flex-direction: column;
   width: 100%;
   margin: 0 12px;
 }
-#Section_Personal_Information form .area_TextInputs .div_TextInputs .text_TextInput span{
+
+#Section_Basic form .area_TextInputs .ingredients_TextInputs .ingredients_Text_TextInput{
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  margin-top: 5px;
+}
+#Section_Basic form .area_TextInputs .div_TextInputs .text_TextInput span{
   font-family: Montserrat;
   color: #777777;
   margin-bottom: 4px;
   font-weight: 400;
   font-size: 14px;
 }
-#Section_Personal_Information form .area_TextInputs .div_TextInputs .text_TextInput input{
+#Section_Basic form .area_TextInputs .div_TextInputs .text_TextInput input{
   font-family: 'Montserrat';
   font-weight: 300;
   width: 100%;
@@ -134,6 +151,49 @@ body{
   border-radius: 3px;
 }
 
+#Section_Basic form .area_TextInputs .ingredients_TextInputs .ingredients_Text_TextInput input{
+  font-family: 'Montserrat';
+  font-weight: 300;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: none;
+  background-color: #f4f5f7;
+  padding-left: 10px;
+  font-size: 13px;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+
+#Section_Basic form .area_Main .area_Text_And_Photo .section_Info_Area{
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 120px;
+  margin-right: 20px;
+}
+
+#Section_Basic form .area_Main .area_Text_And_Photo .section_Info_Area div{
+  display: flex;
+  flex-direction: column;
+}
+
+#Section_Basic form .area_Main .area_Text_And_Photo .section_Info_Area span{
+  font-family: 'Montserrat';
+  font-weight: 300;
+  outline: none;
+  border: none;
+  color: #777777;
+}
+
+#Section_Basic form .area_Main .area_Text_And_Photo .section_Info_Area p{
+  font-family: 'Montserrat';
+  font-weight: bold;
+  outline: none;
+  border: none;
+  color: #777777;
+}
+
 .teste{
   display: flex;
   flex-direction: row;
@@ -141,7 +201,7 @@ body{
   justify-content: space-between;
 }
 
-#Section_Personal_Information form .area_TextInputs .div_TextInputs .text_TextInput textarea{
+#Section_Basic form .area_TextInputs .div_TextInputs .text_TextInput textarea{
   font-family: 'Montserrat';
   font-weight: 300;
   width: 100%;
@@ -155,7 +215,7 @@ body{
   resize: vertical;
 }
 
-#Section_Personal_Information form .area_TextInputs_PassWord{
+#Section_Basic form .area_TextInputs_PassWord{
   grid-column: 1/2;
   grid-row: 2/4;
   box-shadow: 0 8px 26px -4px hsla(0,0%,8%,.15),0 8px 9px -5px hsla(0,0%,8%,.06);
@@ -167,7 +227,7 @@ body{
   row-gap: 20px;
   margin-top: 40px;
 }
-#Section_Personal_Information form .area_TextInputs_PassWord h3{
+#Section_Basic form .area_TextInputs_PassWord h3{
   font-family: Montserrat;
   font-weight: 300;
   color: #333;
@@ -256,4 +316,13 @@ body{
 #cep_Tolltip_Text{
   padding: 60px 20px !important;
   transform: translate(0%,-55%) !important;
+}
+
+#Section_Basic{
+  display: grid;
+  grid-template-rows: 8vh 40vh 48vh;
+  width: 80%;
+  column-gap: 20px;
+  row-gap: 10px;
+  padding: 0 30px;
 }
